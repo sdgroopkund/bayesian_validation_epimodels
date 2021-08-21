@@ -26,3 +26,5 @@ Codes for running the Bayesian validation framework
 5. ptp_calc_mahalanobis.R – Codes to calculate the posterior tail probability using Mahalanobis distance for Settings 1, 2 and 3, as discussed in the paper.
 
   h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
+  
+  &theta 
