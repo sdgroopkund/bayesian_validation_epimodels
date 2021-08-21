@@ -7,7 +7,7 @@ Codes for running the model
 
 1. Model_n.R – Contains the function sim.mod.n that runs the HIV transmission model for a given set of parameters by solving the ODE equations using the C ODE solver rk4 
 
-2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter &tau based on the community-specific and global parameters (x and &theta), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of &tau. 
+2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter 'tau' based on the community-specific and global parameters ('x' and 'theta'), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of 'tau'. 
 
 3. GetResults_simu.R – Contains the function ‘getresults.simu’ that runs the model on the fitted parameters and outputs HIV prevalence among other things for each community over time.
 
@@ -21,10 +21,6 @@ Codes for running the Bayesian validation framework
 
 3. function_gen.R – Codes for different functions needed for Bayesian validation analysis
 
-4. ggplot_plots.R – Codes to generate the plots given in the paper (discrepancy plots for Settings 1, 2 and 3 and the posterior distribution of &theta<sub>5;</sub> for Setting 2)
+4. ggplot_plots.R – Codes to generate the plots given in the paper (discrepancy plots for Settings 1, 2 and 3 and the posterior distribution of 'theta<sub>5;</sub>' for Setting 2)
 
 5. ptp_calc_mahalanobis.R – Codes to calculate the posterior tail probability using Mahalanobis distance for Settings 1, 2 and 3, as discussed in the paper.
-
-  h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
-  
-  &theta 
