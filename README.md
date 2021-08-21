@@ -4,10 +4,14 @@ This Folder contains codes for replicating the analyses in the paper ‘Bayesian
 These codes are broadly divided into two groups:
 
 Codes for running the model
-	1. Model_n.R – Contains the function sim.mod.n that runs the HIV transmission model for a given set of parameters by solving the ODE equations using the C ODE solver rk4 
-	2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter τ based on the community-specific and global parameters (x and θ), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of τ. 
-	3. GetResults_simu.R – Contains the function ‘getresults.simu’ that runs the model on the fitted parameters and outputs HIV prevalence among other things for each community over time.
-	4. The folder named ‘C’ – Needed for running the model. Contain backend C codes to solve the ODEs. Should be in the same folder as the rest of these codes for the model to run.
+
+1. Model_n.R – Contains the function sim.mod.n that runs the HIV transmission model for a given set of parameters by solving the ODE equations using the C ODE solver rk4 
+
+2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter τ based on the community-specific and global parameters (x and θ), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of τ. 
+
+3. GetResults_simu.R – Contains the function ‘getresults.simu’ that runs the model on the fitted parameters and outputs HIV prevalence among other things for each community over time.
+
+4. The folder named ‘C’ – Needed for running the model. Contain backend C codes to solve the ODEs. Should be in the same folder as the rest of these codes for the model to run.
 
 Codes for running the Bayesian validation framework 
 	1. Bayesian_validation_set1n3 – Codes to run Simulation Settings 1 (Null Model) and 3 (Faulty Model) in the paper
