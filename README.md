@@ -32,4 +32,4 @@ However, to run the simulation network one also needs to have codes in the 'C' f
 
 # REFERENCES
 
-1. Woods,  B.,  Rothery,  C.,  Anderson,  S.  J.,  Eaton,  J.  W.,  Revill,  P.,  Hallett,  T.  B.,  &  Claxton,  K.  (2018). Appraising the value of evidence generation activities: an HIV modelling study.BMJ  global  health, 3(6), e000488
+1. Woods,  B.,  Rothery,  C.,  Anderson,  S.  J.,  Eaton,  J.  W.,  Revill,  P.,  Hallett,  T.  B.,  &  Claxton,  K.  (2018). Appraising the value of evidence generation activities: an HIV modelling study. BMJ  global  health, 3(6), e000488
