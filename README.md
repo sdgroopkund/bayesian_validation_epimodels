@@ -7,7 +7,7 @@ Codes for running the model
 
 1. Model_n.R – Contains the function sim.mod.n that runs the HIV transmission model for a given set of parameters by solving the ODE equations using the C ODE solver rk4 
 
-2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter tau based on the community-specific and global parameters (x and theta), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of tau. 
+2. FitModel_n.R – Contains the function ‘fitmodel.n’ that fits the parameter &tau based on the community-specific and global parameters (x and &theta), fitted using least squares with R  optimization solver ‘optim’. See Section 3.1 in the draft for the definition of &tau. 
 
 3. GetResults_simu.R – Contains the function ‘getresults.simu’ that runs the model on the fitted parameters and outputs HIV prevalence among other things for each community over time.
 
