@@ -1,5 +1,6 @@
-## new ggplot figures 
-
+######################################################
+#### CODES TO GENERATE THE PLOTS IN THE PAPER
+######################################################
 
 library(reshape2)
 library(ggplot2)
@@ -12,18 +13,35 @@ library(ggsignif)
 library(contrast)
 library(coda)
 
-## SETTINGS 1 and 3
+########################################################################################################################################################
+
+## DISCREPANCY PLOTS (SETTINGS 1 and 3)
  
 # homdir<-"H:/lenovo backup/staff scientist/combination prevention/codes/backup from loaner/cluster/workspaces/batch_10_10_16_reimagined"
 # setwd(homdir)
 
 ## null scenario
 
+bb=c('000000','151515151515')
+cc=c('TRUE','FALSE')
+
+MCMCsamples=5000;
+lagsize=4
+thetasize=17
+nloc=6
+
+index.vector<-function(sample,trace) seq(1,sample,trace)
+
+ind_2<-index.vector(MCMCsamples,2)
+ind_5<-index.vector(MCMCsamples,5)
+ind_10<-index.vector(MCMCsamples,10)
+
+n.script=20
+
 plot1<-list()
 for (i in 1:nloc){
   p<-NULL
   for (t in 1:n.script){
-    zz <- c(1:6,8,10:12)
     tryCatch({load.nm <- paste("MCMC_b_",bb[1],"_ut_",cc[2],"_s_",t,".Rdata",sep="")    
     load(load.nm)
     mcmc.obj1<-mcmc(mcmc.run$mcmc.chain[ind_5,])
@@ -73,7 +91,6 @@ plot2<-list()
 for (i in 1:nloc){
   p<-NULL
   for (t in 1:n.script){
-    #zz <- c(1:6,8,10:12)
     tryCatch({load.nm <- paste("MCMC_b_",bb[2],"_ut_",cc[2],"_s_",t,".Rdata",sep="")
     load(load.nm)
     mcmc.obj1<-mcmc(mcmc.run$mcmc.chain[ind_5,])
@@ -115,18 +132,12 @@ title <- ggdraw() + draw_label("posterior distribution of discrepancy under faul
 FP2.new<-plot_grid(title, bigplot2, ncol=1, rel_heights=c(0.1, 1))
 FP2.new
 
+#########################################################################################################################################################
 
-
-
-
-
-
-
-## SETTING 3
+## DISCREPANCY PLOTS FOR SETTING 2
 
 # homdir<-"H:/lenovo backup/staff scientist/combination prevention/codes/backup from loaner/new_codes/batch_5_31_17/onetheta_extra_04_30_18"
 # setwd(homdir)
-
 
 MCMCsamples=4000;
 lagsize=4
@@ -186,8 +197,8 @@ bigplot1<-plot_grid(plot1[[1]],plot1[[2]],plot1[[3]],plot1[[4]],plot1[[5]],plot1
 
 title <- ggdraw() + draw_label(expression(bold(paste('posterior distribution of discrepancy for negative bias in ',sigma[1], ' when prior is flat'))), fontface='bold',size=18, hjust=0.5)
 
-FP1.new<-plot_grid(title, bigplot1, ncol=1, rel_heights=c(0.1, 1))
-FP1.new
+FP3.new<-plot_grid(title, bigplot1, ncol=1, rel_heights=c(0.1, 1))
+FP3.new
 
 
 
@@ -236,14 +247,13 @@ bigplot2<-plot_grid(plot2[[1]],plot2[[2]],plot2[[3]],plot2[[4]],plot2[[5]],plot2
 
 title <- ggdraw() + draw_label(expression(bold(paste('posterior distribution of discrepancy for negative bias in ',sigma[1], ' when prior is narrow'))), fontface='bold',size=18, hjust=0.5)
 
-FP2.new<-plot_grid(title, bigplot2, ncol=1, rel_heights=c(0.1, 1))
-FP2.new
+FP4.new<-plot_grid(title, bigplot2, ncol=1, rel_heights=c(0.1, 1))
+FP4.new
 
+##################################################################################################################################################################################################
 
-
-
-
-# PLOT FOR POSTERIOR DISTRIBUTION OF THETA 5
+#### PLOT FOR POSTERIOR DISTRIBUTION OF THETA 5
+## Flat Prior
 
 plot.flat<-list(2)
 for (i in 2:1){  
@@ -308,9 +318,7 @@ FP5.n<-plot_grid(title1, plot.flat[[1]], ncol=1, rel_heights=c(0.05, 1))
 FP5.n
 
 
-
-## PLOT FOR POSTERIOR DISTRIBUTION OF THETA 5
-
+## Narrow Prior
 
 plot.narrow<-list(2)
 for (i in 2:1){  
