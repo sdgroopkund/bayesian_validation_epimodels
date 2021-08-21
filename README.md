@@ -14,8 +14,13 @@ Codes for running the model
 4. The folder named ‘C’ – Needed for running the model. Contain backend C codes to solve the ODEs. Should be in the same folder as the rest of these codes for the model to run.
 
 Codes for running the Bayesian validation framework 
-	1. Bayesian_validation_set1n3 – Codes to run Simulation Settings 1 (Null Model) and 3 (Faulty Model) in the paper
-	2. Bayesian_validation_set2 – Codes to run Simulation Settings 2 (Faulty Prior) in the paper
-	3. function_gen.R – Codes for different functions needed for Bayesian validation analysis
-	4. ggplot_plots.R – Codes to generate the plots given in the paper (discrepancy plots for Settings 1, 2 and 3 and the posterior distribution of ϴ5 for Setting 2)
-	5. ptp_calc_mahalanobis.R – Codes to calculate the posterior tail probability using Mahalanobis distance for Settings 1, 2 and 3, as discussed in the paper.
+
+1. Bayesian_validation_set1n3 – Codes to run Simulation Settings 1 (Null Model) and 3 (Faulty Model) in the paper
+
+2. Bayesian_validation_set2 – Codes to run Simulation Settings 2 (Faulty Prior) in the paper
+
+3. function_gen.R – Codes for different functions needed for Bayesian validation analysis
+
+4. ggplot_plots.R – Codes to generate the plots given in the paper (discrepancy plots for Settings 1, 2 and 3 and the posterior distribution of ϴ5 for Setting 2)
+
+5. ptp_calc_mahalanobis.R – Codes to calculate the posterior tail probability using Mahalanobis distance for Settings 1, 2 and 3, as discussed in the paper.
